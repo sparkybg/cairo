@@ -1417,6 +1417,7 @@ _render_glyph_outline (FT_Face                    face,
 		       cairo_font_options_t	 *font_options,
 		       cairo_image_surface_t	**surface)
 {
+	printf("_render_glyph_outline\n");
     int rgba = FC_RGBA_UNKNOWN;
     int lcd_filter = FT_LCD_FILTER_LEGACY;
     FT_GlyphSlot glyphslot = face->glyph;
