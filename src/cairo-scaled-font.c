@@ -1708,7 +1708,7 @@ cairo_scaled_font_text_to_glyphs_internal_cached(cairo_scaled_font_t* scaled_fon
 	const char* p;
 	int i;
 
-	printf("cairo_scaled_font_text_to_glyphs_internal_cached()\n"); //sparky
+	printf("cairo_scaled_font_text_to_glyphs_internal_cached(%d)\n",num_chars); //sparky
 
 	for (i = 0; i < GLYPH_LUT_SIZE; i++)
 		glyph_lut_unicode[i] = ~0U;
@@ -1777,7 +1777,7 @@ cairo_scaled_font_text_to_glyphs_internal_uncached(cairo_scaled_font_t* scaled_f
 	const char* p;
 	int i;
 
-	printf("cairo_scaled_font_text_to_glyphs_internal_uncached()\n"); //sparky
+	printf("cairo_scaled_font_text_to_glyphs_internal_uncached(%d)\n", num_chars); //sparky
 
 	p = utf8;
 	for (i = 0; i < num_chars; i++) {
@@ -1809,10 +1809,12 @@ cairo_scaled_font_text_to_glyphs_internal_uncached(cairo_scaled_font_t* scaled_f
 
 			x += scaled_glyph->metrics.x_advance;
 			y += scaled_glyph->metrics.y_advance;
-			printf("x_advance[%d]:%f\n", i, scaled_glyph->metrics.x_advance); //sparky
+
+			printf("x_advance[%d]:%f\n", i, g->metrics.x_advance); //sparky
 		}
 
 		glyphs[i].index = g;
+
 
 		if (clusters) {
 			(*clusters)[i].num_bytes = num_bytes;
