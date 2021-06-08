@@ -2027,7 +2027,8 @@ _cairo_ft_font_face_scaled_font_create (void		    *abstract_font_face,
 					const cairo_font_options_t *options,
 					cairo_scaled_font_t       **font_out)
 {
-	printf("_cairo_ft_font_face_scaled_font_create\n"); //sparky
+	printf("_cairo_ft_font_face_scaled_font_create(), Round:%d\n", options->round_glyph_positions); //sparky
+
     cairo_ft_font_face_t *font_face = abstract_font_face;
     cairo_ft_scaled_font_t *scaled_font;
     FT_Face face;

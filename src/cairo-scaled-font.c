@@ -1628,7 +1628,7 @@ cairo_scaled_font_glyph_extents(cairo_scaled_font_t* scaled_font,
 		top = scaled_glyph->metrics.y_bearing + glyphs[i].y;
 		bottom = top + scaled_glyph->metrics.height;
 
-		printf("cairo_scaled_font_glyph_extents[%d]:%f", i, scaled_glyph->metrics.width);
+		printf("cairo_scaled_font_glyph_extents[%d]:%f\n", i, scaled_glyph->metrics.width);
 
 
 		if (!visible) {
