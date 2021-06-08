@@ -317,6 +317,7 @@ _cairo_user_text_to_glyphs (void		      *abstract_font,
 			    int			       *num_clusters,
 			    cairo_text_cluster_flags_t *cluster_flags)
 {
+	printf("_cairo_user_text_to_glyphs()\n"); //sparky
     cairo_int_status_t status = CAIRO_INT_STATUS_UNSUPPORTED;
 
     cairo_user_scaled_font_t *scaled_font = abstract_font;
