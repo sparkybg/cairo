@@ -3076,6 +3076,8 @@ cairo_font_extents (cairo_t              *cr,
     if (unlikely (cr->status))
 	return;
 
+    printf("cairo_font_extents\n");
+
     status = cr->backend->font_extents (cr, extents);
     if (unlikely (status))
 	_cairo_set_error (cr, status);
