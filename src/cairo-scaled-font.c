@@ -1810,7 +1810,7 @@ cairo_scaled_font_text_to_glyphs_internal_uncached(cairo_scaled_font_t* scaled_f
 			x += scaled_glyph->metrics.x_advance;
 			y += scaled_glyph->metrics.y_advance;
 
-			printf("x_advance[%d]:%f\n", i, g->metrics.x_advance); //sparky
+			printf("x_advance[%d]:%f\n", i, scaled_glyph->metrics.x_advance); //sparky
 		}
 
 		glyphs[i].index = g;
