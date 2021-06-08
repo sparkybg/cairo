@@ -1141,7 +1141,6 @@ cairo_scaled_font_create (cairo_font_face_t          *font_face,
 	}
     }
 
-	printf("font_face->backend->scaled_font_create\n"); //sparky
     status = font_face->backend->scaled_font_create (font_face, font_matrix,
 						     ctm, options, &scaled_font);
     /* Did we leave the backend in an error state? */

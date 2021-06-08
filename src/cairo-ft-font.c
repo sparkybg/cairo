@@ -2027,7 +2027,7 @@ _cairo_ft_font_face_scaled_font_create (void		    *abstract_font_face,
 					const cairo_font_options_t *options,
 					cairo_scaled_font_t       **font_out)
 {
-	printf("_cairo_ft_font_face_scaled_font_create"); //sparky
+	printf("_cairo_ft_font_face_scaled_font_create\n"); //sparky
     cairo_ft_font_face_t *font_face = abstract_font_face;
     cairo_ft_scaled_font_t *scaled_font;
     FT_Face face;
@@ -2121,6 +2121,8 @@ _cairo_ft_font_face_scaled_font_create (void		    *abstract_font_face,
 	    fs_metrics.max_y_advance = face->max_advance_height / scale;
 	}
     }
+
+	printf("fs_metrics.max_x_advance=%f", fs_metrics.max_x_advance); //sparky
 
     status = _cairo_scaled_font_set_metrics (&scaled_font->base, &fs_metrics);
     if (unlikely (status))
