@@ -2238,6 +2238,8 @@ _cairo_scaled_font_glyph_device_extents(cairo_scaled_font_t* scaled_font,
 	cairo_round_glyph_positions_t round_glyph_positions = _cairo_font_options_get_round_glyph_positions(&scaled_font->options);
 	int i;
 
+	printf("_cairo_scaled_font_glyph_device_extents(round:%d)", round_glyph_positions == CAIRO_ROUND_GLYPH_POS_ON); //sparky
+
 	if (unlikely(scaled_font->status))
 		return scaled_font->status;
 
