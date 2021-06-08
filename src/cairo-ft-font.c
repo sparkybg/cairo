@@ -2122,7 +2122,7 @@ _cairo_ft_font_face_scaled_font_create (void		    *abstract_font_face,
 	}
     }
 
-	printf("fs_metrics.max_x_advance=%f", fs_metrics.max_x_advance); //sparky
+	printf("fs_metrics.max_x_advance=%f\n", fs_metrics.max_x_advance); //sparky
 
     status = _cairo_scaled_font_set_metrics (&scaled_font->base, &fs_metrics);
     if (unlikely (status))

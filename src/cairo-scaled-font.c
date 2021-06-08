@@ -1708,6 +1708,8 @@ cairo_scaled_font_text_to_glyphs_internal_cached(cairo_scaled_font_t* scaled_fon
 	const char* p;
 	int i;
 
+	printf("cairo_scaled_font_text_to_glyphs_internal_cached()\n"); //sparky
+
 	for (i = 0; i < GLYPH_LUT_SIZE; i++)
 		glyph_lut_unicode[i] = ~0U;
 
@@ -1730,6 +1732,7 @@ cairo_scaled_font_text_to_glyphs_internal_cached(cairo_scaled_font_t* scaled_fon
 			glyphs[i].index = glyph_slot->index;
 			x += glyph_slot->x_advance;
 			y += glyph_slot->y_advance;
+			printf("x_advance[%d]:%f\n", i, glyph_slot->x_advance); //sparky
 		}
 		else {
 			unsigned long g;
@@ -1773,6 +1776,8 @@ cairo_scaled_font_text_to_glyphs_internal_uncached(cairo_scaled_font_t* scaled_f
 {
 	const char* p;
 	int i;
+
+	printf("cairo_scaled_font_text_to_glyphs_internal_uncached()\n"); //sparky
 
 	p = utf8;
 	for (i = 0; i < num_chars; i++) {
