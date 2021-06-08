@@ -1214,7 +1214,7 @@ _cairo_default_context_font_extents (void *abstract_cr,
 				     cairo_font_extents_t *extents)
 {
     cairo_default_context_t *cr = abstract_cr;
-
+    printf("_cairo_default_context_font_extents\n");
     return _cairo_gstate_get_font_extents (cr->gstate, extents);
 }
 
