@@ -1628,6 +1628,9 @@ cairo_scaled_font_glyph_extents(cairo_scaled_font_t* scaled_font,
 		top = scaled_glyph->metrics.y_bearing + glyphs[i].y;
 		bottom = top + scaled_glyph->metrics.height;
 
+		printf("cairo_scaled_font_glyph_extents[%d]:%f", i, scaled_glyph->metrics.width);
+
+
 		if (!visible) {
 			visible = TRUE;
 			min_x = left;
@@ -1708,7 +1711,7 @@ cairo_scaled_font_text_to_glyphs_internal_cached(cairo_scaled_font_t* scaled_fon
 	const char* p;
 	int i;
 
-	printf("cairo_scaled_font_text_to_glyphs_internal_cached(%d)\n",num_chars); //sparky
+	printf("cairo_scaled_font_text_to_glyphs_internal_cached(%d)\n", num_chars); //sparky
 
 	for (i = 0; i < GLYPH_LUT_SIZE; i++)
 		glyph_lut_unicode[i] = ~0U;
