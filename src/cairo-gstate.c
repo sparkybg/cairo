@@ -1982,11 +1982,12 @@ _cairo_gstate_glyph_extents (cairo_gstate_t *gstate,
     if (unlikely (status))
 	return status;
 
-    printf("_cairo_gstate_glyph_extents\n");
 
     cairo_scaled_font_glyph_extents (gstate->scaled_font,
 				     glyphs, num_glyphs,
 				     extents);
+
+    printf("_cairo_gstate_glyph_extents(width:%f, advance:%f)\n", extents->width, extents->x_advance); //sparky
 
     return cairo_scaled_font_status (gstate->scaled_font);
 }
@@ -2138,7 +2139,7 @@ _cairo_gstate_glyph_path (cairo_gstate_t      *gstate,
     cairo_glyph_t *transformed_glyphs;
     cairo_status_t status;
 
-    printf("_cairo_gstate_glyph_path\n");
+    printf("_cairo_gstate_glyph_path\n"); //sparky
 
     status = _cairo_gstate_ensure_scaled_font (gstate);
     if (unlikely (status))
