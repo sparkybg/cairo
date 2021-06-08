@@ -1535,6 +1535,9 @@ cairo_scaled_font_text_extents(cairo_scaled_font_t* scaled_font,
 	}
 
 	cairo_scaled_font_glyph_extents(scaled_font, glyphs, num_glyphs, extents);
+
+	printf("cairo_scaled_font_text_extents(width:%f, advance_x:%f)", extents->width, extents->x_advance); //sparky
+
 	free(glyphs);
 
 	return;
