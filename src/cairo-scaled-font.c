@@ -2198,6 +2198,8 @@ _cairo_scaled_font_single_glyph_device_extents(cairo_scaled_font_t* scaled_font,
 		cairo_bool_t round_xy = _cairo_font_options_get_round_glyph_positions(&scaled_font->options) == CAIRO_ROUND_GLYPH_POS_ON;
 		cairo_box_t box;
 		cairo_fixed_t v;
+		
+		printf("_cairo_scaled_font_single_glyph_device_extents(round:%d)", round_xy); //sparky
 
 		if (round_xy)
 			v = _cairo_fixed_from_int(_cairo_lround(glyph->x));
