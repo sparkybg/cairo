@@ -137,6 +137,8 @@ _cairo_user_scaled_glyph_init (void			 *abstract_font,
 			       cairo_scaled_glyph_t	 *scaled_glyph,
 			       cairo_scaled_glyph_info_t  info)
 {
+	printf("_cairo_user_scaled_glyph_init\n");
+
     cairo_int_status_t status = CAIRO_STATUS_SUCCESS;
     cairo_user_scaled_font_t *scaled_font = abstract_font;
     cairo_surface_t *recording_surface = scaled_glyph->recording_surface;
