@@ -3412,6 +3412,9 @@ cairo_text_extents(cairo_t* cr,
 			glyphs, num_glyphs,
 			extents);
 	}
+
+	printf("cairo_text_extents(width:%f, advance:%f", extents->width, extents->x_advance); //sparkybg
+
 	cairo_glyph_free(glyphs);
 
 	if (unlikely(status))

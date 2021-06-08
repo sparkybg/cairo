@@ -1337,6 +1337,8 @@ _cairo_default_context_glyph_extents (void                *abstract_cr,
 {
     cairo_default_context_t *cr = abstract_cr;
 
+    printf("_cairo_default_context_glyph_extents\n"); //sparky
+
     return _cairo_gstate_glyph_extents (cr->gstate, glyphs, num_glyphs, extents);
 }
 
